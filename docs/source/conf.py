@@ -10,8 +10,8 @@ import datetime
 year = datetime.datetime.now(tz=datetime.timezone.utc).date().year
 
 # General information about the project.
-project = 'projName'
-author = 'FirstName LastName, FirstName LastName'
+project = 'AMOCarray'
+author = 'Eleanor Frajka-Williams'
 copyright = f"{year}, {author}"
 release = 'v0.0.0'
 
@@ -39,4 +39,4 @@ html_static_path = ['_static']
 
 source_suffix = [".rst", ".md"]
 
-html_logo = "_static/logo.jpg"
+html_logo = "_static/logo.png"

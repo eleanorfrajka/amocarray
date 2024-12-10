@@ -1,0 +1,12 @@
+WMO_IDENTIFIER: None
+PLATFORM_MODEL: University of Washington Seaglider M1 glider
+PLATFORM_SERIAL_NUMBER: sg015
+PLATFORM_DEPTH_RATING: 1000
+PLATFORM_MAKER: University of Washington School of Oceanography
+    - platform_maker_vocabulary: https://vocab.nerc.ac.uk/collection/B75/current/ORG00142/
+GLIDER_FIRMWARE_VERSION: seaglider 66.05 # from seaglider_software_version
+LANDSTATION_VERSION: basestation v2.8 # from base_station_version attribute
+BATTERY_TYPE: lithium 
+BATTERY_PACK: 24V + 10V
+TELECOM_TYPE: iridium
+TRACKING_SYSTEM: gps

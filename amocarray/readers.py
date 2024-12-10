@@ -22,16 +22,15 @@ import pooch
 # we should use importlib.resources
 # Here's how to use importlib.resources (https://importlib-resources.readthedocs.io/en/latest/using.html)
 server = "https://www.dropbox.com/scl/fo/dhinr4hvpk05zcecqyz2x/ADTqIuEpWHCxeZDspCiTN68?rlkey=bt9qheandzbucca5zhf5v9j7a&dl=0"
-server = "https://www.ncei.noaa.gov/data/oceans/glider/seaglider/uw/015/20040924/"
 data_source_og = pooch.create(
-    path=pooch.os_cache("seagliderOG1"),
+    path=pooch.os_cache("amocarray"),
     base_url=server,
     registry=None,
 )
-registry_file = files('seagliderOG1').joinpath('seaglider_registry.txt')
+registry_file = files('amocarray').joinpath('amoc_registry.txt')
 data_source_og.load_registry(registry_file)
 
-def load_sample_dataset(dataset_name="p0040034_20031007.nc"):
+def load_sample_dataset(dataset_name="moc_transports.nc"):
     if dataset_name in data_source_og.registry.keys():
         file_path = data_source_og.fetch(dataset_name)
         return xr.open_dataset(file_path)
@@ -40,7 +39,7 @@ def load_sample_dataset(dataset_name="p0040034_20031007.nc"):
         raise ValueError(msg)
 
 
-def read_basestation(source, start_profile=None, end_profile=None):
+def read_26N(source):
     """
     Load datasets from either an online source or a local directory, optionally filtering by profile range.
 
