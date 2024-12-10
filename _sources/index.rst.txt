@@ -1,0 +1,36 @@
+.. Documentation master file.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+:parser: myst_parser.sphinx_ # this is the markdown parser
+
+Welcome to projectName's documentation!
+======================================
+
+`template-project` is a repository to demonstrate the structure of a Python project `projectName`, the use of git via Github for collaborative coding, GitHub Actions for running tests and building documentation, and deploying the documentation on GitHub Pages.
+
+For recommendations or bug reports, please visit https://github.com/eleanorfrajka/template-project/issues/new
+
+Getting started
+---------------         
+.. toctree::
+   :maxdepth: 3
+
+   installation.md
+   gitcollab.md
+   github.md
+
+Indices and tables
+------------------
+.. toctree::
+   :maxdepth: 3
+
+   demo-output.ipynb
+   projectName
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
