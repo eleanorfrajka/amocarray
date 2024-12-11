@@ -39,4 +39,4 @@ html_static_path = ['_static']
 
 source_suffix = [".rst", ".md"]
 
-html_logo = "_static/logo.png"
+html_logo = "_static/logo.jpg"
