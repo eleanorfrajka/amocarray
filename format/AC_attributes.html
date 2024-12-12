@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global attributes &mdash; AMOCarray v0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8b92e751"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AMOCarray demo" href="../demo-output.html" />
+    <link rel="prev" title="General conventions" href="AC_general_conventions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AMOCarray
+              <img src="../_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="AC_general_conventions.html">General conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AC_general_conventions.html#doi-management">DOI management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AC_general_conventions.html#ac0-1-file-naming-convention">AC0.1 file naming convention</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Global attributes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../demo-output.html">AMOCarray demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amocarray.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">AMOCarray</span> <span class="pre">API</span></code></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AMOCarray</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Global attributes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/format/AC_attributes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="global-attributes">
+<h1>Global attributes<a class="headerlink" href="#global-attributes" title="Link to this heading"></a></h1>
+<p>The global attribute section is used for data discovery. The following global attributes should appear in the global section. The NetCDF Climate and Forecast (CF) Metadata Conventions are available from: <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#trajectory-data">http://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#trajectory-data</a>. It is recommended that extra global attributes follow ACDD convention”.</p>
+<p>See also <a class="reference external" href="https://oceangliderscommunity.github.io/OG-format-user-manual/OG_Format.html">https://oceangliderscommunity.github.io/OG-format-user-manual/OG_Format.html</a></p>
+<ul>
+<li><p><strong>title</strong>: A short phrase or sentence describing the dataset.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: mandatory</p></li>
+<li><p><em>ex.</em>: “RAPID 26N array data”</p></li>
+</ul>
+</li>
+<li><p><strong>program</strong>: The overarching program(s) of which the dataset is a part. A program consists of a set (or portfolio) of related and possibly interdependent projects that meet an overarching objective.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: mandatory</p></li>
+<li><p><em>ex.</em>: “RAPID_MOCHA_WBTS” - note that no special characters should be used here as this will be included in the filenaming convention.</p></li>
+</ul>
+</li>
+<li><p><strong>program_vocabulary</strong>: A controlled vocabulary for the program attribute.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p>To be defined</p></li>
+</ul>
+</li>
+<li><p><strong>id</strong>: Formatted mission name: &lt;program&gt;_&lt;end_date&gt;_&lt;release&gt;</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: mandatory</p></li>
+<li><p><em>ex.</em>: “rapid_20210616T_v2023.1”</p></li>
+</ul>
+</li>
+<li><p><strong>naming_authority</strong>: A unique name that identifies the institution who provided the id.  ACDD-1.3 recommends using reverse-DNS naming.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>ex.</em>: “uk.ac.rapid”</p></li>
+</ul>
+</li>
+<li><p><strong>institution</strong>: The name of the institution where the original data was produced.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>ex.</em>: “National Oceanography Centre”</p></li>
+</ul>
+</li>
+<li><p><strong>internal_dataset_identifier</strong>: The mission identifier used by the institution principally responsible for originating this data</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>ex.</em>: “moc_transport_profiles_200404_2012105_era.mat”</p></li>
+</ul>
+</li>
+<li><p><strong>geospatial_lat_min</strong>: Describes a simple lower latitude limit</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>format</em>: decimal degree</p></li>
+</ul>
+</li>
+<li><p><strong>geospatial_lat_max</strong>: Describes a simple upper latitude limit</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>format</em>: decimal degree</p></li>
+</ul>
+</li>
+<li><p><strong>geospatial_lon_min</strong>: Describes a simple lower longitude limit</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>format</em>: decimal degree</p></li>
+</ul>
+</li>
+<li><p><strong>geospatial_lon_max</strong>: Describes a simple upper longitude limit</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>format</em>: decimal degree</p></li>
+</ul>
+</li>
+<li><p><strong>geospatial_vertical_min</strong>: Describes a simple lower vertical limit</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>format</em>: meter (negative for sub-surface)</p></li>
+</ul>
+</li>
+<li><p><strong>geospatial_vertical_max</strong>: Describes a simple upper vertical limit</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>format</em>: meter (negative for sub-surface)</p></li>
+</ul>
+</li>
+<li><p><strong>time_coverage_start</strong>: The time of the first data point in the dataset</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>format</em>: Formatted string: YYYYmmddTHHMMss ex.: 20240425T145805</p></li>
+</ul>
+</li>
+<li><p><strong>time_coverage_end</strong>: The time of the last data point in the dataset</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>format</em>: Formatted string: YYYYmmddTHHMMss ex.: 20240425T145805</p></li>
+</ul>
+</li>
+<li><p><strong>project</strong>: The name of the project(s) principally responsible for originating this data. Multiple projects are separated by commas.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>ex.</em>: “RAPID, MOCHA, WBTS”</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>contributor_name</strong>: Name of the contributors to the data set. Multiple contributors are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested, PI name is mandatory</p></li>
+<li><p><em>ex.</em>: “John Smith, Jane Doe”</p></li>
+</ul>
+</li>
+<li><p><strong>contributor_role</strong>: The role of the contributors to the data set. Multiple roles are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested, PI role is mandatory</p></li>
+<li><p><em>ex.</em>: “Principal Investigator, Data Manager”</p></li>
+</ul>
+</li>
+<li><p><strong>contributor_role_vocabulary</strong>: Controlled vocabulary for the roles used in the “contributors_role”. Multiple contributors’ roles and vocabularies are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: PI vocabulary is mandatory</p></li>
+<li><p><em>ex.:</em> “<a class="reference external" href="http://vocab.nerc.ac.uk/search_nvs/W08/">http://vocab.nerc.ac.uk/search_nvs/W08/</a>, <a class="reference external" href="http://vocab.nerc.ac.uk/search_nvs/W08/">http://vocab.nerc.ac.uk/search_nvs/W08/</a>”</p></li>
+</ul>
+</li>
+<li><p><strong>contributor_email</strong>: Email address of the contributors to the data set. Multiple email addresses are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested, PI email is mandatory</p></li>
+<li><p><em>ex.</em>: “<a class="reference external" href="mailto:john&#46;smith&#37;&#52;&#48;web&#46;com">john<span>&#46;</span>smith<span>&#64;</span>web<span>&#46;</span>com</a>, <a class="reference external" href="mailto:jane&#46;doe&#37;&#52;&#48;web&#46;com">jane<span>&#46;</span>doe<span>&#64;</span>web<span>&#46;</span>com</a>”</p></li>
+</ul>
+</li>
+<li><p><strong>contributor_id</strong>: Unique id of the contributors to the data set. Multiple contributors’ ids are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable.</p></li>
+<li><p><em>ex.</em>: “0000-0001-5109-3700, 0000-0001-5109-3700”</p></li>
+</ul>
+</li>
+<li><p><strong>contributing_institutions</strong>: Names of the institutions that contributed to the data set. Multiple institutions are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>ex.</em>: “National Oceanography Centre, University of Miami”</p></li>
+</ul>
+</li>
+<li><p><strong>contributing_institutions_vocabulary</strong>: Controlled vocabulary for the institutions used in the “contributing_institutions”. Multiple institutions and vocabularies are separated by commas.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>ex.</em>: “<a class="reference external" href="https://ror.org/00874hx02">https://ror.org/00874hx02</a>, <a class="reference external" href="https://ror.org/02dgjyy92">https://ror.org/02dgjyy92</a>”</p></li>
+</ul>
+</li>
+<li><p><strong>uri</strong>:  Other universal resource identifiers relevant to be linked to this dataset. Multiple uris are separated by a comma.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>ex.</em>: “<a class="reference external" href="https://www.rapid.ac.uk">https://www.rapid.ac.uk</a>”</p></li>
+</ul>
+</li>
+<li><p><strong>doi</strong>: Digital Object Identifier for the AC1 format dataset.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>ex.</em>: “10.17600/12345678”</p></li>
+</ul>
+</li>
+<li><p><strong>original_doi</strong>: Digital Object Identifier for the original dataset. Multiple original dois are separated by a comma.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>ex.</em>: “10.5285/223b34a3-2dc5-c945-e063-7086abc0f274”</p></li>
+</ul>
+</li>
+<li><p><strong>reference</strong>: A reference to a publication that describes the original data set. Multiple references are separated by a comma.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: highly desirable</p></li>
+<li><p><em>ex.</em>: “Moat B.I.; Smeed D.A.; Rayner D.; Johns W.E.; Smith, R.; Volkov, D.; Elipot S.; Petit T.; Kajtar J.; Baringer M. O.; and Collins, J. (2024). Atlantic meridional overturning circulation observed by the RAPID-MOCHA-WBTS (RAPID-Meridional Overturning Circulation and Heatflux Array-Western Boundary Time Series) array at 26N from 2004 to 2023 (v2023.1), British Oceanographic Data Centre - Natural Environment Research Council, UK. doi: 10.5285/223b34a3-2dc5-c945-e063-7086abc0f274”</p></li>
+</ul>
+</li>
+<li><p><strong>web_link:</strong> A link to a web page that provides more information about the dataset. Multiple web links are separated by a comma.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>ex.</em>: “<a class="reference external" href="https://www.rapid.ac.uk">https://www.rapid.ac.uk</a>”</p></li>
+</ul>
+</li>
+<li><p><strong>comment</strong>: Miscellaneous information about the dataset or methods used to produced it.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: suggested</p></li>
+<li><p><em>ex.</em>: “Data was collected during the RAPID-MOCHA-WBTS project”</p></li>
+</ul>
+</li>
+<li><p><strong>date_created</strong>: The date the dataset was created.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: mandatory</p></li>
+<li><p><em>format</em>: Formatted string: YYYYmmddTHHMMss ex.: 20240425T145805</p></li>
+</ul>
+</li>
+<li><p><strong>Conventions</strong>: A comma-separated list of the conventions that are followed by the dataset.</p>
+<ul class="simple">
+<li><p><em>Requirement status</em>: mandatory</p></li>
+<li><p><em>ex.</em>: “CF-1.8, ACDD-1.3, AC-0.1”</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="AC_general_conventions.html" class="btn btn-neutral float-left" title="General conventions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../demo-output.html" class="btn btn-neutral float-right" title="AMOCarray demo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Eleanor Frajka-Williams.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

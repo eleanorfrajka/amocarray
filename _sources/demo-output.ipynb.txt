@@ -24,10 +24,10 @@
    "id": "6a1920f3",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2024-12-11T16:08:38.492817Z",
-     "iopub.status.busy": "2024-12-11T16:08:38.492657Z",
-     "iopub.status.idle": "2024-12-11T16:08:39.325888Z",
-     "shell.execute_reply": "2024-12-11T16:08:39.325377Z"
+     "iopub.execute_input": "2024-12-12T07:18:08.254049Z",
+     "iopub.status.busy": "2024-12-12T07:18:08.253878Z",
+     "iopub.status.idle": "2024-12-12T07:18:09.168648Z",
+     "shell.execute_reply": "2024-12-12T07:18:09.168129Z"
     }
    },
    "outputs": [
@@ -60,10 +60,10 @@
    "id": "1e070d18",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2024-12-11T16:08:39.327656Z",
-     "iopub.status.busy": "2024-12-11T16:08:39.327385Z",
-     "iopub.status.idle": "2024-12-11T16:08:39.329815Z",
-     "shell.execute_reply": "2024-12-11T16:08:39.329439Z"
+     "iopub.execute_input": "2024-12-12T07:18:09.170474Z",
+     "iopub.status.busy": "2024-12-12T07:18:09.170186Z",
+     "iopub.status.idle": "2024-12-12T07:18:09.172864Z",
+     "shell.execute_reply": "2024-12-12T07:18:09.172380Z"
     }
    },
    "outputs": [],
@@ -75,51 +75,42 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "1b5a108b",
+   "id": "eb977c4d",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2024-12-11T16:08:39.331183Z",
-     "iopub.status.busy": "2024-12-11T16:08:39.331033Z",
-     "iopub.status.idle": "2024-12-11T16:08:39.383420Z",
-     "shell.execute_reply": "2024-12-11T16:08:39.382989Z"
+     "iopub.execute_input": "2024-12-12T07:18:09.174536Z",
+     "iopub.status.busy": "2024-12-12T07:18:09.174175Z",
+     "iopub.status.idle": "2024-12-12T07:18:11.430501Z",
+     "shell.execute_reply": "2024-12-12T07:18:11.430001Z"
     }
    },
    "outputs": [
     {
-     "name": "stdout",
+     "name": "stderr",
      "output_type": "stream",
      "text": [
-      "<xarray.Dataset> Size: 1MB\n",
-      "Dimensions:       (time: 13779)\n",
-      "Coordinates:\n",
-      "  * time          (time) datetime64[ns] 110kB 2004-04-02 ... 2023-02-11\n",
-      "Data variables:\n",
-      "    t_therm10     (time) float64 110kB ...\n",
-      "    t_aiw10       (time) float64 110kB ...\n",
-      "    t_ud10        (time) float64 110kB ...\n",
-      "    t_ld10        (time) float64 110kB ...\n",
-      "    t_bw10        (time) float64 110kB ...\n",
-      "    t_gs10        (time) float64 110kB ...\n",
-      "    t_ek10        (time) float64 110kB ...\n",
-      "    t_umo10       (time) float64 110kB ...\n",
-      "    moc_mar_hc10  (time) float64 110kB ...\n",
-      "Attributes:\n",
-      "    Title:                         RAPID MOC timeseries\n",
-      "    Institution:                   National Oceanography Centre,UK\n",
-      "    Website:                       http://www.rapid.ac.uk/\n",
-      "    Acknowledgement:               The RAPID-MOC monitoring project is funded...\n",
-      "    Created_by:                    Ben Moat\n",
-      "    Creation_date:                 17-Sep-2024\n",
-      "    Principle_investigator:        Ben Moat\n",
-      "    Principle_investigator_email:  ben.moat@noc.ac.uk\n",
-      "    DOI:                           doi: 10.5285/223b34a32dc5c945e0637086abc0f...\n"
+      "Downloading file 'moc_vertical.nc' from 'https://www.dropbox.com/scl/fo/4bjo8slq1krn5rkhbkyds/AM-EVfSHi8ro7u2y8WAcKyw?rlkey=16nqlykhgkwfyfeodkj274xpc&dl=0/moc_vertical.nc' to '/home/runner/.cache/amocarray'.\n"
+     ]
+    },
+    {
+     "ename": "ValueError",
+     "evalue": "SHA256 hash of downloaded file (moc_vertical.nc) does not match the known hash: expected sha256:3d3a40fc45102c4dbe32fcbd03d1ec19724495145d014c6d02a44b8413447d46 but got 40df3bc821df19dffcb3a86c6995c96ca19741af2c694d856ba9fc01e058f5aa. Deleted download for safety. The downloaded file may have been corrupted or the known hash may be outdated.",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[3], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;66;03m# Load data from data/moc_transports\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m ds \u001b[38;5;241m=\u001b[39m \u001b[43mreaders\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mload_sample_dataset\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(ds)\n",
+      "File \u001b[0;32m~/work/amocarray/amocarray/amocarray/readers.py:43\u001b[0m, in \u001b[0;36mload_sample_dataset\u001b[0;34m(dataset_name)\u001b[0m\n\u001b[1;32m     41\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mload_sample_dataset\u001b[39m(dataset_name\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mmoc_vertical.nc\u001b[39m\u001b[38;5;124m\"\u001b[39m):\n\u001b[1;32m     42\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m dataset_name \u001b[38;5;129;01min\u001b[39;00m data_source_og\u001b[38;5;241m.\u001b[39mregistry\u001b[38;5;241m.\u001b[39mkeys():\n\u001b[0;32m---> 43\u001b[0m         file_path \u001b[38;5;241m=\u001b[39m \u001b[43mdata_source_og\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfetch\u001b[49m\u001b[43m(\u001b[49m\u001b[43mdataset_name\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     44\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m xr\u001b[38;5;241m.\u001b[39mopen_dataset(file_path)\n\u001b[1;32m     45\u001b[0m     \u001b[38;5;28;01melse\u001b[39;00m:\n",
+      "File \u001b[0;32m~/micromamba/envs/TEST/lib/python3.13/site-packages/pooch/core.py:589\u001b[0m, in \u001b[0;36mPooch.fetch\u001b[0;34m(self, fname, processor, downloader, progressbar)\u001b[0m\n\u001b[1;32m    586\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m downloader \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[1;32m    587\u001b[0m         downloader \u001b[38;5;241m=\u001b[39m choose_downloader(url, progressbar\u001b[38;5;241m=\u001b[39mprogressbar)\n\u001b[0;32m--> 589\u001b[0m     \u001b[43mstream_download\u001b[49m\u001b[43m(\u001b[49m\n\u001b[1;32m    590\u001b[0m \u001b[43m        \u001b[49m\u001b[43murl\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m    591\u001b[0m \u001b[43m        \u001b[49m\u001b[43mfull_path\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m    592\u001b[0m \u001b[43m        \u001b[49m\u001b[43mknown_hash\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m    593\u001b[0m \u001b[43m        \u001b[49m\u001b[43mdownloader\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m    594\u001b[0m \u001b[43m        \u001b[49m\u001b[43mpooch\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m,\u001b[49m\n\u001b[1;32m    595\u001b[0m \u001b[43m        \u001b[49m\u001b[43mretry_if_failed\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mretry_if_failed\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m    596\u001b[0m \u001b[43m    \u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m    598\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m processor \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[1;32m    599\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m processor(\u001b[38;5;28mstr\u001b[39m(full_path), action, \u001b[38;5;28mself\u001b[39m)\n",
+      "File \u001b[0;32m~/micromamba/envs/TEST/lib/python3.13/site-packages/pooch/core.py:808\u001b[0m, in \u001b[0;36mstream_download\u001b[0;34m(url, fname, known_hash, downloader, pooch, retry_if_failed)\u001b[0m\n\u001b[1;32m    806\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m temporary_file(path\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mstr\u001b[39m(fname\u001b[38;5;241m.\u001b[39mparent)) \u001b[38;5;28;01mas\u001b[39;00m tmp:\n\u001b[1;32m    807\u001b[0m     downloader(url, tmp, pooch)\n\u001b[0;32m--> 808\u001b[0m     \u001b[43mhash_matches\u001b[49m\u001b[43m(\u001b[49m\u001b[43mtmp\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mknown_hash\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mstrict\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43;01mTrue\u001b[39;49;00m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43msource\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mfname\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mname\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m    809\u001b[0m     shutil\u001b[38;5;241m.\u001b[39mmove(tmp, \u001b[38;5;28mstr\u001b[39m(fname))\n\u001b[1;32m    810\u001b[0m \u001b[38;5;28;01mbreak\u001b[39;00m\n",
+      "File \u001b[0;32m~/micromamba/envs/TEST/lib/python3.13/site-packages/pooch/hashes.py:176\u001b[0m, in \u001b[0;36mhash_matches\u001b[0;34m(fname, known_hash, strict, source)\u001b[0m\n\u001b[1;32m    174\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m source \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[1;32m    175\u001b[0m         source \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mstr\u001b[39m(fname)\n\u001b[0;32m--> 176\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mValueError\u001b[39;00m(\n\u001b[1;32m    177\u001b[0m         \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00malgorithm\u001b[38;5;241m.\u001b[39mupper()\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m hash of downloaded file (\u001b[39m\u001b[38;5;132;01m{\u001b[39;00msource\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m) does not match\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    178\u001b[0m         \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m the known hash: expected \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mknown_hash\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m but got \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mnew_hash\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m. Deleted\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    179\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m download for safety. The downloaded file may have been corrupted or\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    180\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m the known hash may be outdated.\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    181\u001b[0m     )\n\u001b[1;32m    182\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m matches\n",
+      "\u001b[0;31mValueError\u001b[0m: SHA256 hash of downloaded file (moc_vertical.nc) does not match the known hash: expected sha256:3d3a40fc45102c4dbe32fcbd03d1ec19724495145d014c6d02a44b8413447d46 but got 40df3bc821df19dffcb3a86c6995c96ca19741af2c694d856ba9fc01e058f5aa. Deleted download for safety. The downloaded file may have been corrupted or the known hash may be outdated."
      ]
     }
    ],
    "source": [
     "# Load data from data/moc_transports\n",
-    "file_path = os.path.join(data_path, 'moc_transports.nc')\n",
-    "ds = xr.open_dataset(file_path)\n",
+    "ds = readers.load_sample_dataset()\n",
     "print(ds)"
    ]
   },
@@ -129,135 +120,23 @@
    "id": "e97968f5",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2024-12-11T16:08:39.384936Z",
-     "iopub.status.busy": "2024-12-11T16:08:39.384660Z",
-     "iopub.status.idle": "2024-12-11T16:08:39.437040Z",
-     "shell.execute_reply": "2024-12-11T16:08:39.436628Z"
+     "iopub.execute_input": "2024-12-12T07:18:11.432504Z",
+     "iopub.status.busy": "2024-12-12T07:18:11.432110Z",
+     "iopub.status.idle": "2024-12-12T07:18:11.442346Z",
+     "shell.execute_reply": "2024-12-12T07:18:11.441904Z"
     }
    },
    "outputs": [
     {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "information is based on xarray Dataset\n"
+     "ename": "NameError",
+     "evalue": "name 'ds' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[4], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m plotters\u001b[38;5;241m.\u001b[39mshow_contents(\u001b[43mds\u001b[49m)\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'ds' is not defined"
      ]
-    },
-    {
-     "data": {
-      "text/html": [
-       "<style type=\"text/css\">\n",
-       "</style>\n",
-       "<table id=\"T_9f971\">\n",
-       "  <thead>\n",
-       "    <tr>\n",
-       "      <th class=\"blank level0\" >&nbsp;</th>\n",
-       "      <th id=\"T_9f971_level0_col0\" class=\"col_heading level0 col0\" >dims</th>\n",
-       "      <th id=\"T_9f971_level0_col1\" class=\"col_heading level0 col1\" >units</th>\n",
-       "      <th id=\"T_9f971_level0_col2\" class=\"col_heading level0 col2\" >comment</th>\n",
-       "      <th id=\"T_9f971_level0_col3\" class=\"col_heading level0 col3\" >standard_name</th>\n",
-       "      <th id=\"T_9f971_level0_col4\" class=\"col_heading level0 col4\" >dtype</th>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th class=\"index_name level0\" >name</th>\n",
-       "      <th class=\"blank col0\" >&nbsp;</th>\n",
-       "      <th class=\"blank col1\" >&nbsp;</th>\n",
-       "      <th class=\"blank col2\" >&nbsp;</th>\n",
-       "      <th class=\"blank col3\" >&nbsp;</th>\n",
-       "      <th class=\"blank col4\" >&nbsp;</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row0\" class=\"row_heading level0 row0\" >moc_mar_hc10</th>\n",
-       "      <td id=\"T_9f971_row0_col0\" class=\"data row0 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row0_col1\" class=\"data row0 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row0_col2\" class=\"data row0 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row0_col3\" class=\"data row0 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row0_col4\" class=\"data row0 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row1\" class=\"row_heading level0 row1\" >t_aiw10</th>\n",
-       "      <td id=\"T_9f971_row1_col0\" class=\"data row1 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row1_col1\" class=\"data row1 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row1_col2\" class=\"data row1 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row1_col3\" class=\"data row1 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row1_col4\" class=\"data row1 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row2\" class=\"row_heading level0 row2\" >t_bw10</th>\n",
-       "      <td id=\"T_9f971_row2_col0\" class=\"data row2 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row2_col1\" class=\"data row2 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row2_col2\" class=\"data row2 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row2_col3\" class=\"data row2 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row2_col4\" class=\"data row2 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row3\" class=\"row_heading level0 row3\" >t_ek10</th>\n",
-       "      <td id=\"T_9f971_row3_col0\" class=\"data row3 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row3_col1\" class=\"data row3 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row3_col2\" class=\"data row3 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row3_col3\" class=\"data row3 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row3_col4\" class=\"data row3 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row4\" class=\"row_heading level0 row4\" >t_gs10</th>\n",
-       "      <td id=\"T_9f971_row4_col0\" class=\"data row4 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row4_col1\" class=\"data row4 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row4_col2\" class=\"data row4 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row4_col3\" class=\"data row4 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row4_col4\" class=\"data row4 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row5\" class=\"row_heading level0 row5\" >t_ld10</th>\n",
-       "      <td id=\"T_9f971_row5_col0\" class=\"data row5 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row5_col1\" class=\"data row5 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row5_col2\" class=\"data row5 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row5_col3\" class=\"data row5 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row5_col4\" class=\"data row5 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row6\" class=\"row_heading level0 row6\" >t_therm10</th>\n",
-       "      <td id=\"T_9f971_row6_col0\" class=\"data row6 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row6_col1\" class=\"data row6 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row6_col2\" class=\"data row6 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row6_col3\" class=\"data row6 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row6_col4\" class=\"data row6 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row7\" class=\"row_heading level0 row7\" >t_ud10</th>\n",
-       "      <td id=\"T_9f971_row7_col0\" class=\"data row7 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row7_col1\" class=\"data row7 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row7_col2\" class=\"data row7 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row7_col3\" class=\"data row7 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row7_col4\" class=\"data row7 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row8\" class=\"row_heading level0 row8\" >t_umo10</th>\n",
-       "      <td id=\"T_9f971_row8_col0\" class=\"data row8 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row8_col1\" class=\"data row8 col1\" >Sv</td>\n",
-       "      <td id=\"T_9f971_row8_col2\" class=\"data row8 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row8_col3\" class=\"data row8 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row8_col4\" class=\"data row8 col4\" >float64</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th id=\"T_9f971_level0_row9\" class=\"row_heading level0 row9\" >time</th>\n",
-       "      <td id=\"T_9f971_row9_col0\" class=\"data row9 col0\" >time</td>\n",
-       "      <td id=\"T_9f971_row9_col1\" class=\"data row9 col1\" ></td>\n",
-       "      <td id=\"T_9f971_row9_col2\" class=\"data row9 col2\" ></td>\n",
-       "      <td id=\"T_9f971_row9_col3\" class=\"data row9 col3\" ></td>\n",
-       "      <td id=\"T_9f971_row9_col4\" class=\"data row9 col4\" >datetime64[ns]</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n"
-      ],
-      "text/plain": [
-       "<pandas.io.formats.style.Styler at 0x7f00fabbb620>"
-      ]
-     },
-     "execution_count": 4,
-     "metadata": {},
-     "output_type": "execute_result"
     }
    ],
    "source": [
@@ -266,11 +145,51 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "142070b1",
-   "metadata": {},
-   "outputs": [],
-   "source": []
+   "execution_count": 5,
+   "id": "e77565e2",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2024-12-12T07:18:11.443836Z",
+     "iopub.status.busy": "2024-12-12T07:18:11.443671Z",
+     "iopub.status.idle": "2024-12-12T07:18:11.537786Z",
+     "shell.execute_reply": "2024-12-12T07:18:11.537360Z"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'ds' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[5], line 6\u001b[0m\n\u001b[1;32m      3\u001b[0m fig, axes \u001b[38;5;241m=\u001b[39m plt\u001b[38;5;241m.\u001b[39msubplots(nrows\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m1\u001b[39m, ncols\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m1\u001b[39m, figsize\u001b[38;5;241m=\u001b[39m(\u001b[38;5;241m12\u001b[39m, \u001b[38;5;241m5\u001b[39m))\n\u001b[1;32m      5\u001b[0m \u001b[38;5;66;03m# Plot stream function\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[43mds\u001b[49m[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mstream_function_mar\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m.\u001b[39mplot(x\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mtime\u001b[39m\u001b[38;5;124m'\u001b[39m, y\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mdepth\u001b[39m\u001b[38;5;124m'\u001b[39m, cmap\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mviridis\u001b[39m\u001b[38;5;124m'\u001b[39m, ax\u001b[38;5;241m=\u001b[39maxes)\n\u001b[1;32m      7\u001b[0m axes\u001b[38;5;241m.\u001b[39mset_title(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mStream Function (MAR)\u001b[39m\u001b[38;5;124m'\u001b[39m)\n\u001b[1;32m      8\u001b[0m axes\u001b[38;5;241m.\u001b[39minvert_yaxis()\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'ds' is not defined"
+     ]
+    },
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAA+AAAAGyCAYAAABk/q6oAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjkuMywgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/GU6VOAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAf30lEQVR4nO3df2zV9b348VdpaavutoswaxHs6qaTXTJ2aQOj3GbRaQ0Ybkh2QxcXq15M1my7BHp1A1l0EJNmu5m51ym4RdAsQW/jz/hH52huNn4IS0ZTlkXI3SJcC1srac1a1N0i8Ll/+KXf27Uo59C+aeXxSM4ffe/9Pud9lvfqnn7O6acgy7IsAAAAgAk17WJvAAAAAC4FAhwAAAASEOAAAACQgAAHAACABAQ4AAAAJCDAAQAAIAEBDgAAAAkIcAAAAEhAgAMAAEACAhwAAAASyDnAd+3aFcuXL49Zs2ZFQUFBvPzyyx+5ZufOnVFTUxOlpaVx3XXXxRNPPJHPXgEAAGDKyjnA33333Zg/f3489thj5zX/yJEjsWzZsqivr4+urq544IEHYvXq1fHCCy/kvFkAAACYqgqyLMvyXlxQEC+99FKsWLHinHO++93vxiuvvBKHDh0aHmtubo7f/va3sW/fvnxfGgAAAKaUool+gX379kVDQ8OIsdtuuy22bt0a77//fkyfPn3UmqGhoRgaGhr++cyZM/H222/HjBkzoqCgYKK3DAAAwCUuy7I4ceJEzJo1K6ZNG58/nzbhAd7b2xsVFRUjxioqKuLUqVPR19cXlZWVo9a0trbGxo0bJ3prAAAA8KGOHj0as2fPHpfnmvAAj4hRV63Pfur9XFez169fHy0tLcM/DwwMxLXXXhtHjx6NsrKyidsoAAAARMTg4GDMmTMn/uZv/mbcnnPCA/zqq6+O3t7eEWPHjx+PoqKimDFjxphrSkpKoqSkZNR4WVmZAAcAACCZ8fwa9ITfB3zx4sXR0dExYmzHjh1RW1s75ve/AQAA4OMo5wB/55134sCBA3HgwIGI+OA2YwcOHIju7u6I+ODj401NTcPzm5ub480334yWlpY4dOhQbNu2LbZu3Rr33Xff+LwDAAAAmAJy/gj6/v3746abbhr++ex3te+66654+umno6enZzjGIyKqq6ujvb091q5dG48//njMmjUrHn300fjqV786DtsHAACAqeGC7gOeyuDgYJSXl8fAwIDvgAMAADDhJqJDJ/w74AAAAIAABwAAgCQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgATyCvDNmzdHdXV1lJaWRk1NTezevftD52/fvj3mz58fl19+eVRWVsY999wT/f39eW0YAAAApqKcA7ytrS3WrFkTGzZsiK6urqivr4+lS5dGd3f3mPP37NkTTU1NsWrVqnj99dfjueeei9/85jdx7733XvDmAQAAYKrIOcAfeeSRWLVqVdx7770xd+7c+Ld/+7eYM2dObNmyZcz5v/71r+PTn/50rF69Oqqrq+Pv//7v4xvf+Ebs37//gjcPAAAAU0VOAX7y5Mno7OyMhoaGEeMNDQ2xd+/eMdfU1dXFsWPHor29PbIsi7feeiuef/75uP3228/5OkNDQzE4ODjiAQAAAFNZTgHe19cXp0+fjoqKihHjFRUV0dvbO+aaurq62L59ezQ2NkZxcXFcffXV8clPfjJ+/OMfn/N1Wltbo7y8fPgxZ86cXLYJAAAAk05ef4StoKBgxM9Zlo0aO+vgwYOxevXqePDBB6OzszNeffXVOHLkSDQ3N5/z+devXx8DAwPDj6NHj+azTQAAAJg0inKZPHPmzCgsLBx1tfv48eOjroqf1draGkuWLIn7778/IiK+8IUvxBVXXBH19fXx8MMPR2Vl5ag1JSUlUVJSksvWAAAAYFLL6Qp4cXFx1NTUREdHx4jxjo6OqKurG3PNe++9F9OmjXyZwsLCiPjgyjkAAABcCnL+CHpLS0s8+eSTsW3btjh06FCsXbs2uru7hz9Svn79+mhqahqev3z58njxxRdjy5Ytcfjw4Xjttddi9erVsXDhwpg1a9b4vRMAAACYxHL6CHpERGNjY/T398emTZuip6cn5s2bF+3t7VFVVRURET09PSPuCX733XfHiRMn4rHHHot/+Zd/iU9+8pNx8803xw9+8IPxexcAAAAwyRVkU+Bz4IODg1FeXh4DAwNRVlZ2sbcDAADAx9xEdGhefwUdAAAAyI0ABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgATyCvDNmzdHdXV1lJaWRk1NTezevftD5w8NDcWGDRuiqqoqSkpK4jOf+Uxs27Ytrw0DAADAVFSU64K2trZYs2ZNbN68OZYsWRI/+clPYunSpXHw4MG49tprx1yzcuXKeOutt2Lr1q3x2c9+No4fPx6nTp264M0DAADAVFGQZVmWy4JFixbFggULYsuWLcNjc+fOjRUrVkRra+uo+a+++mp87Wtfi8OHD8eVV16Z1yYHBwejvLw8BgYGoqysLK/nAAAAgPM1ER2a00fQT548GZ2dndHQ0DBivKGhIfbu3TvmmldeeSVqa2vjhz/8YVxzzTVxww03xH333Rd/+ctfzvk6Q0NDMTg4OOIBAAAAU1lOH0Hv6+uL06dPR0VFxYjxioqK6O3tHXPN4cOHY8+ePVFaWhovvfRS9PX1xTe/+c14++23z/k98NbW1ti4cWMuWwMAAIBJLa8/wlZQUDDi5yzLRo2ddebMmSgoKIjt27fHwoULY9myZfHII4/E008/fc6r4OvXr4+BgYHhx9GjR/PZJgAAAEwaOV0BnzlzZhQWFo662n38+PFRV8XPqqysjGuuuSbKy8uHx+bOnRtZlsWxY8fi+uuvH7WmpKQkSkpKctkaAAAATGo5XQEvLi6Ompqa6OjoGDHe0dERdXV1Y65ZsmRJ/OlPf4p33nlneOz3v/99TJs2LWbPnp3HlgEAAGDqyfkj6C0tLfHkk0/Gtm3b4tChQ7F27dro7u6O5ubmiPjg4+NNTU3D8++4446YMWNG3HPPPXHw4MHYtWtX3H///fFP//RPcdlll43fOwEAAIBJLOf7gDc2NkZ/f39s2rQpenp6Yt68edHe3h5VVVUREdHT0xPd3d3D8z/xiU9ER0dH/PM//3PU1tbGjBkzYuXKlfHwww+P37sAAACASS7n+4BfDO4DDgAAQEoX/T7gAAAAQH4EOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACSQV4Bv3rw5qquro7S0NGpqamL37t3nte61116LoqKi+OIXv5jPywIAAMCUlXOAt7W1xZo1a2LDhg3R1dUV9fX1sXTp0uju7v7QdQMDA9HU1BRf+cpX8t4sAAAATFUFWZZluSxYtGhRLFiwILZs2TI8Nnfu3FixYkW0traec93Xvva1uP7666OwsDBefvnlOHDgwHm/5uDgYJSXl8fAwECUlZXlsl0AAADI2UR0aE5XwE+ePBmdnZ3R0NAwYryhoSH27t17znVPPfVUvPHGG/HQQw+d1+sMDQ3F4ODgiAcAAABMZTkFeF9fX5w+fToqKipGjFdUVERvb++Ya/7whz/EunXrYvv27VFUVHRer9Pa2hrl5eXDjzlz5uSyTQAAAJh08vojbAUFBSN+zrJs1FhExOnTp+OOO+6IjRs3xg033HDez79+/foYGBgYfhw9ejSfbQIAAMCkcX6XpP+fmTNnRmFh4air3cePHx91VTwi4sSJE7F///7o6uqKb3/72xERcebMmciyLIqKimLHjh1x8803j1pXUlISJSUluWwNAAAAJrWcroAXFxdHTU1NdHR0jBjv6OiIurq6UfPLysrid7/7XRw4cGD40dzcHJ/73OfiwIEDsWjRogvbPQAAAEwROV0Bj4hoaWmJO++8M2pra2Px4sXx05/+NLq7u6O5uTkiPvj4+B//+Mf42c9+FtOmTYt58+aNWH/VVVdFaWnpqHEAAAD4OMs5wBsbG6O/vz82bdoUPT09MW/evGhvb4+qqqqIiOjp6fnIe4IDAADApSbn+4BfDO4DDgAAQEoX/T7gAAAAQH4EOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACSQV4Bv3rw5qquro7S0NGpqamL37t3nnPviiy/GrbfeGp/61KeirKwsFi9eHL/4xS/y3jAAAABMRTkHeFtbW6xZsyY2bNgQXV1dUV9fH0uXLo3u7u4x5+/atStuvfXWaG9vj87Ozrjpppti+fLl0dXVdcGbBwAAgKmiIMuyLJcFixYtigULFsSWLVuGx+bOnRsrVqyI1tbW83qOv/3bv43GxsZ48MEHz2v+4OBglJeXx8DAQJSVleWyXQAAAMjZRHRoTlfAT548GZ2dndHQ0DBivKGhIfbu3Xtez3HmzJk4ceJEXHnlleecMzQ0FIODgyMeAAAAMJXlFOB9fX1x+vTpqKioGDFeUVERvb295/UcP/rRj+Ldd9+NlStXnnNOa2trlJeXDz/mzJmTyzYBAABg0snrj7AVFBSM+DnLslFjY3n22Wfj+9//frS1tcVVV111znnr16+PgYGB4cfRo0fz2SYAAABMGkW5TJ45c2YUFhaOutp9/PjxUVfF/1pbW1usWrUqnnvuubjllls+dG5JSUmUlJTksjUAAACY1HK6Al5cXBw1NTXR0dExYryjoyPq6urOue7ZZ5+Nu+++O5555pm4/fbb89spAAAATGE5XQGPiGhpaYk777wzamtrY/HixfHTn/40uru7o7m5OSI++Pj4H//4x/jZz34WER/Ed1NTU/z7v/97fOlLXxq+en7ZZZdFeXn5OL4VAAAAmLxyDvDGxsbo7++PTZs2RU9PT8ybNy/a29ujqqoqIiJ6enpG3BP8Jz/5SZw6dSq+9a1vxbe+9a3h8bvuuiuefvrpC38HAAAAMAXkfB/wi8F9wAEAAEjpot8HHAAAAMiPAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAEBDgAAAAkIMABAAAgAQEOAAAACQhwAAAASECAAwAAQAICHAAAABIQ4AAAAJCAAAcAAIAE8grwzZs3R3V1dZSWlkZNTU3s3r37Q+fv3LkzampqorS0NK677rp44okn8tosAAAATFU5B3hbW1usWbMmNmzYEF1dXVFfXx9Lly6N7u7uMecfOXIkli1bFvX19dHV1RUPPPBArF69Ol544YUL3jwAAABMFQVZlmW5LFi0aFEsWLAgtmzZMjw2d+7cWLFiRbS2to6a/93vfjdeeeWVOHTo0PBYc3Nz/Pa3v419+/ad12sODg5GeXl5DAwMRFlZWS7bBQAAgJxNRIcW5TL55MmT0dnZGevWrRsx3tDQEHv37h1zzb59+6KhoWHE2G233RZbt26N999/P6ZPnz5qzdDQUAwNDQ3/PDAwEBEf/BcAAAAAE+1sf+Z4zfpD5RTgfX19cfr06aioqBgxXlFREb29vWOu6e3tHXP+qVOnoq+vLyorK0etaW1tjY0bN44anzNnTi7bBQAAgAvS398f5eXl4/JcOQX4WQUFBSN+zrJs1NhHzR9r/Kz169dHS0vL8M9//vOfo6qqKrq7u8ftjcNkMzg4GHPmzImjR4/6qgUfW845lwLnnEuBc86lYGBgIK699tq48sorx+05cwrwmTNnRmFh4air3cePHx91lfusq6++esz5RUVFMWPGjDHXlJSURElJyajx8vJy/wPnY6+srMw552PPOedS4JxzKXDOuRRMmzZ+d+/O6ZmKi4ujpqYmOjo6Rox3dHREXV3dmGsWL148av6OHTuitrZ2zO9/AwAAwMdRzinf0tISTz75ZGzbti0OHToUa9euje7u7mhubo6IDz4+3tTUNDy/ubk53nzzzWhpaYlDhw7Ftm3bYuvWrXHfffeN37sAAACASS7n74A3NjZGf39/bNq0KXp6emLevHnR3t4eVVVVERHR09Mz4p7g1dXV0d7eHmvXro3HH388Zs2aFY8++mh89atfPe/XLCkpiYceemjMj6XDx4VzzqXAOedS4JxzKXDOuRRMxDnP+T7gAAAAQO7G79vkAAAAwDkJcAAAAEhAgAMAAEACAhwAAAASmDQBvnnz5qiuro7S0tKoqamJ3bt3f+j8nTt3Rk1NTZSWlsZ1110XTzzxRKKdQv5yOecvvvhi3HrrrfGpT30qysrKYvHixfGLX/wi4W4hP7n+Pj/rtddei6KiovjiF784sRuEcZDrOR8aGooNGzZEVVVVlJSUxGc+85nYtm1bot1CfnI959u3b4/58+fH5ZdfHpWVlXHPPfdEf39/ot1Cbnbt2hXLly+PWbNmRUFBQbz88ssfuWY8GnRSBHhbW1usWbMmNmzYEF1dXVFfXx9Lly4dcTuz/+vIkSOxbNmyqK+vj66urnjggQdi9erV8cILLyTeOZy/XM/5rl274tZbb4329vbo7OyMm266KZYvXx5dXV2Jdw7nL9dzftbAwEA0NTXFV77ylUQ7hfzlc85XrlwZ//mf/xlbt26N//qv/4pnn302brzxxoS7htzkes737NkTTU1NsWrVqnj99dfjueeei9/85jdx7733Jt45nJ9333035s+fH4899th5zR+3Bs0mgYULF2bNzc0jxm688cZs3bp1Y87/zne+k914440jxr7xjW9kX/rSlyZsj3Chcj3nY/n85z+fbdy4cby3BuMm33Pe2NiYfe9738seeuihbP78+RO4Q7hwuZ7zn//851l5eXnW39+fYnswLnI95//6r/+aXXfddSPGHn300Wz27NkTtkcYLxGRvfTSSx86Z7wa9KJfAT958mR0dnZGQ0PDiPGGhobYu3fvmGv27ds3av5tt90W+/fvj/fff3/C9gr5yuec/7UzZ87EiRMn4sorr5yILcIFy/ecP/XUU/HGG2/EQw89NNFbhAuWzzl/5ZVXora2Nn74wx/GNddcEzfccEPcd9998Ze//CXFliFn+Zzzurq6OHbsWLS3t0eWZfHWW2/F888/H7fffnuKLcOEG68GLRrvjeWqr68vTp8+HRUVFSPGKyoqore3d8w1vb29Y84/depU9PX1RWVl5YTtF/KRzzn/az/60Y/i3XffjZUrV07EFuGC5XPO//CHP8S6deti9+7dUVR00f+RBB8pn3N++PDh2LNnT5SWlsZLL70UfX198c1vfjPefvtt3wNnUsrnnNfV1cX27dujsbEx/ud//idOnToV//AP/xA//vGPU2wZJtx4NehFvwJ+VkFBwYifsywbNfZR88cah8kk13N+1rPPPhvf//73o62tLa666qqJ2h6Mi/M956dPn4477rgjNm7cGDfccEOq7cG4yOX3+ZkzZ6KgoCC2b98eCxcujGXLlsUjjzwSTz/9tKvgTGq5nPODBw/G6tWr48EHH4zOzs549dVX48iRI9Hc3Jxiq5DEeDToRb/cMHPmzCgsLBz1b9OOHz8+6t8wnHX11VePOb+oqChmzJgxYXuFfOVzzs9qa2uLVatWxXPPPRe33HLLRG4TLkiu5/zEiROxf//+6Orqim9/+9sR8UGoZFkWRUVFsWPHjrj55puT7B3OVz6/zysrK+Oaa66J8vLy4bG5c+dGlmVx7NixuP766yd0z5CrfM55a2trLFmyJO6///6IiPjCF74QV1xxRdTX18fDDz/sE6pMeePVoBf9CnhxcXHU1NRER0fHiPGOjo6oq6sbc83ixYtHzd+xY0fU1tbG9OnTJ2yvkK98znnEB1e+77777njmmWd8h4pJL9dzXlZWFr/73e/iwIEDw4/m5ub43Oc+FwcOHIhFixal2jqct3x+ny9ZsiT+9Kc/xTvvvDM89vvf/z6mTZsWs2fPntD9Qj7yOefvvfdeTJs2Mi0KCwsj4v9fJYSpbNwaNKc/2TZB/uM//iObPn16tnXr1uzgwYPZmjVrsiuuuCL77//+7yzLsmzdunXZnXfeOTz/8OHD2eWXX56tXbs2O3jwYLZ169Zs+vTp2fPPP3+x3gJ8pFzP+TPPPJMVFRVljz/+eNbT0zP8+POf/3yx3gJ8pFzP+V/zV9CZCnI95ydOnMhmz56d/eM//mP2+uuvZzt37syuv/767N57771YbwE+Uq7n/KmnnsqKioqyzZs3Z2+88Ua2Z8+erLa2Nlu4cOHFegvwoU6cOJF1dXVlXV1dWURkjzzySNbV1ZW9+eabWZZNXINOigDPsix7/PHHs6qqqqy4uDhbsGBBtnPnzuH/7K677sq+/OUvj5j/q1/9Kvu7v/u7rLi4OPv0pz+dbdmyJfGOIXe5nPMvf/nLWUSMetx1113pNw45yPX3+f8lwJkqcj3nhw4dym655Zbssssuy2bPnp21tLRk7733XuJdQ25yPeePPvpo9vnPfz677LLLssrKyuzrX/96duzYscS7hvPzy1/+8kP/v/ZENWhBlvlMCAAAAEy0i/4dcAAAALgUCHAAAABIQIADAABAAgIcAAAAEhDgAAAAkIAABwAAgAQEOAAAACQgwAEAACABAQ4AAAAJCHAAAABIQIADAABAAgIcAAAAEvhfvPOSx8TMqn4AAAAASUVORK5CYII=",
+      "text/plain": [
+       "<Figure size 1200x500 with 1 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(12, 5))\n",
+    "\n",
+    "# Plot stream function\n",
+    "ds['stream_function_mar'].plot(x='time', y='depth', cmap='viridis', ax=axes)\n",
+    "axes.set_title('Stream Function (MAR)')\n",
+    "axes.invert_yaxis()\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
   }
  ],
  "metadata": {

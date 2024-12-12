@@ -1,15 +1,8 @@
-.. Documentation master file.
+.. Format manual
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 :parser: myst_parser.sphinx_ # this is the markdown parser
-
-Welcome to AMOCarray's documentation!
-======================================
-
-AMOCarray is a repository to read in data from various AMOC observing arrays, and transform the data into a more unified format.
-
-For recommendations or bug reports, please visit https://github.com/eleanorfrajka/amocarray/issues/new
 
 AC0.1 format manual
 ====================
@@ -24,15 +17,16 @@ AC0.1 General conventions
 
    format/AC_general_conventions
    format/AC_attributes
-..   format/File_naming_convention
+..
+   format/Global_attributes
    format/Dimension_definition
    format/Location_variables
    format/Array_name
    format/Geophysical_variables
    format/Evolution_process
 
-AMOCarray's API
-------------------
+AC0.1 Data translators
+----------------------
 .. toctree::
    :maxdepth: 3
 

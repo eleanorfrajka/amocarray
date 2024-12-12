@@ -1,23 +1,23 @@
 :mod:`AMOCarray API`
 -----------------------
 
-.. automodule:: AMOCarray.readers
+.. automodule:: amocarray.readers
    :members:
    :undoc-members:
 
-.. automodule:: AMOCarray.plotters
+.. automodule:: amocarray.plotters
    :members:
    :undoc-members:
 
-.. automodule:: AMOCarray.writers
+.. automodule:: amocarray.writers
    :members:
    :undoc-members:
 
-.. automodule:: AMOCarray.tools
+.. automodule:: amocarray.tools
    :members:
    :undoc-members:
 
-.. automodule:: AMOCarray.utilities
+.. automodule:: amocarray.utilities
    :members:
    :undoc-members:
 
