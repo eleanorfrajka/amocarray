@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="amocarray",
-    version="0.0.1.post1",  # Post-release for deprecation
+    version="0.1.0",  # Deprecation release
     author="Eleanor Frajka-Williams",
     author_email="eleanorrajka@gmail.com",
     description="[DEPRECATED] Please use AMOCatlas instead",
