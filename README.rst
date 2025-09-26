@@ -1,5 +1,5 @@
 DEPRECATED: amocarray → AMOCatlas
-================================
+=================================
 
 .. warning::
    **This package has been DEPRECATED.**
